@@ -3,4 +3,8 @@ XcodePDTemplate
 
 This is a template Xcode project for libPD. I found myself recreating this for projects so I wanted to make it easier for myself.
 
-To use this on your Mac, put it in a folder that is just inside your home folder. On my computer I've got it at ~/Developer. Once it's in there also go and clone pd-for-ios repo into the same ~/Developer folder.'
+To use this on your Mac, put it in a folder that is just inside your home folder. On my computer I've got it at ~/Developer. 
+
+Once it's in there also go and clone pd-for-ios repo into the your user folder ~/.'
+
+- This is a work in progress and sometimes requires some tweaking so I offer no warranty as to the reusability of this at the moment. Good luck!
