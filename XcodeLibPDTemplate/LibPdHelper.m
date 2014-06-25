@@ -46,6 +46,13 @@
     return self;
 }
 
+- (void)addListener:(NSString *)listener
+{
+    [dispatcher addListener:self forSource:listener];
+}
+
+
+
 - (void)receiveBangFromSource:(NSString *)source
 {
     //receiving bangs

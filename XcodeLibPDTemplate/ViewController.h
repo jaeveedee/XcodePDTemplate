@@ -10,5 +10,6 @@
 #import "LibPdHelper.h"
 
 @interface ViewController : UIViewController <LibPDDelegate>
+- (IBAction)play:(id)sender;
 
 @end

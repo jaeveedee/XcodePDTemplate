@@ -28,6 +28,7 @@
 
 - (void)bangSender:(NSString *)receiver;
 - (void)floatSender:(float)f to:(NSString *)r;
+- (void)addListener:(NSString *)listener;
 - (id)initWithPatch:(NSString *)patch;
 
 @end

@@ -26,6 +26,7 @@
 		A70B59CD195A3C3300A91E7C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59CC195A3C3300A91E7C /* AVFoundation.framework */; };
 		A7BE2402195A577300D0A97B /* LibPdHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BE2401195A577300D0A97B /* LibPdHelper.m */; };
 		A7BE240A195B369D00D0A97B /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BE23FB195A4E1D00D0A97B /* libpd-ios.a */; };
+		A7BE240C195B412100D0A97B /* main.pd in Resources */ = {isa = PBXBuildFile; fileRef = A7BE240B195B412100D0A97B /* main.pd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		A7BE2400195A577300D0A97B /* LibPdHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPdHelper.h; sourceTree = "<group>"; };
 		A7BE2401195A577300D0A97B /* LibPdHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibPdHelper.m; sourceTree = "<group>"; };
+		A7BE240B195B412100D0A97B /* main.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.pd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 		A70B598E195A3BB700A91E7C /* XcodeLibPDTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A7BE240B195B412100D0A97B /* main.pd */,
 				A70B5997195A3BB700A91E7C /* AppDelegate.h */,
 				A70B5998195A3BB700A91E7C /* AppDelegate.m */,
 				A7BE2400195A577300D0A97B /* LibPdHelper.h */,
@@ -296,6 +299,7 @@
 			files = (
 				A70B599F195A3BB700A91E7C /* Main_iPad.storyboard in Resources */,
 				A70B59A4195A3BB700A91E7C /* Images.xcassets in Resources */,
+				A7BE240C195B412100D0A97B /* main.pd in Resources */,
 				A70B599C195A3BB700A91E7C /* Main_iPhone.storyboard in Resources */,
 				A70B5993195A3BB700A91E7C /* InfoPlist.strings in Resources */,
 			);
