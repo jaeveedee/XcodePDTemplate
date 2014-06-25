@@ -24,7 +24,7 @@
 		A70B59B7195A3BB700A91E7C /* XcodeLibPDTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A70B59B6195A3BB700A91E7C /* XcodeLibPDTemplateTests.m */; };
 		A70B59CB195A3C2C00A91E7C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59CA195A3C2C00A91E7C /* AudioToolbox.framework */; };
 		A70B59CD195A3C3300A91E7C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59CC195A3C3300A91E7C /* AVFoundation.framework */; };
-		A70B59CE195A3C3A00A91E7C /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59C6195A3BF600A91E7C /* libpd-ios.a */; };
+		A7BE2402195A577300D0A97B /* LibPdHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BE2401195A577300D0A97B /* LibPdHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +35,19 @@
 			remoteGlobalIDString = A70B5984195A3BB700A91E7C;
 			remoteInfo = XcodeLibPDTemplate;
 		};
-		A70B59C5195A3BF600A91E7C /* PBXContainerItemProxy */ = {
+		A7BE23FA195A4E1D00D0A97B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A70B59C1195A3BF600A91E7C /* libpd.xcodeproj */;
+			containerPortal = A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "libpd-ios";
+		};
+		A7BE23FC195A4E1D00D0A97B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 119013AB1486450C00086F19;
+			remoteInfo = "libpd-osx";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,9 +72,11 @@
 		A70B59B2195A3BB700A91E7C /* XcodeLibPDTemplateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XcodeLibPDTemplateTests-Info.plist"; sourceTree = "<group>"; };
 		A70B59B4195A3BB700A91E7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A70B59B6195A3BB700A91E7C /* XcodeLibPDTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeLibPDTemplateTests.m; sourceTree = "<group>"; };
-		A70B59C1195A3BF600A91E7C /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
 		A70B59CA195A3C2C00A91E7C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A70B59CC195A3C3300A91E7C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libpd.xcodeproj; path = "../../pd-for-ios/libpd/libpd.xcodeproj"; sourceTree = "<group>"; };
+		A7BE2400195A577300D0A97B /* LibPdHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibPdHelper.h; sourceTree = "<group>"; };
+		A7BE2401195A577300D0A97B /* LibPdHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibPdHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70B59CE195A3C3A00A91E7C /* libpd-ios.a in Frameworks */,
 				A70B59CD195A3C3300A91E7C /* AVFoundation.framework in Frameworks */,
 				A70B59CB195A3C2C00A91E7C /* AudioToolbox.framework in Frameworks */,
 				A70B598B195A3BB700A91E7C /* CoreGraphics.framework in Frameworks */,
@@ -100,7 +108,7 @@
 		A70B597C195A3BB700A91E7C = {
 			isa = PBXGroup;
 			children = (
-				A70B59C1195A3BF600A91E7C /* libpd.xcodeproj */,
+				A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */,
 				A70B598E195A3BB700A91E7C /* XcodeLibPDTemplate */,
 				A70B59B0195A3BB700A91E7C /* XcodeLibPDTemplateTests */,
 				A70B5987195A3BB700A91E7C /* Frameworks */,
@@ -135,6 +143,8 @@
 			children = (
 				A70B5997195A3BB700A91E7C /* AppDelegate.h */,
 				A70B5998195A3BB700A91E7C /* AppDelegate.m */,
+				A7BE2400195A577300D0A97B /* LibPdHelper.h */,
+				A7BE2401195A577300D0A97B /* LibPdHelper.m */,
 				A70B599A195A3BB700A91E7C /* Main_iPhone.storyboard */,
 				A70B599D195A3BB700A91E7C /* Main_iPad.storyboard */,
 				A70B59A0195A3BB700A91E7C /* ViewController.h */,
@@ -174,10 +184,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A70B59C2195A3BF600A91E7C /* Products */ = {
+		A7BE23F6195A4E1D00D0A97B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A70B59C6195A3BF600A91E7C /* libpd-ios.a */,
+				A7BE23FB195A4E1D00D0A97B /* libpd-ios.a */,
+				A7BE23FD195A4E1D00D0A97B /* libpd-osx.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,8 +258,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A70B59C2195A3BF600A91E7C /* Products */;
-					ProjectRef = A70B59C1195A3BF600A91E7C /* libpd.xcodeproj */;
+					ProductGroup = A7BE23F6195A4E1D00D0A97B /* Products */;
+					ProjectRef = A7BE23F5195A4E1D00D0A97B /* libpd.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -260,11 +271,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A70B59C6195A3BF600A91E7C /* libpd-ios.a */ = {
+		A7BE23FB195A4E1D00D0A97B /* libpd-ios.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libpd-ios.a";
-			remoteRef = A70B59C5195A3BF600A91E7C /* PBXContainerItemProxy */;
+			remoteRef = A7BE23FA195A4E1D00D0A97B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7BE23FD195A4E1D00D0A97B /* libpd-osx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libpd-osx.a";
+			remoteRef = A7BE23FC195A4E1D00D0A97B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -299,6 +317,7 @@
 				A70B59A2195A3BB700A91E7C /* ViewController.m in Sources */,
 				A70B5999195A3BB700A91E7C /* AppDelegate.m in Sources */,
 				A70B5995195A3BB700A91E7C /* main.m in Sources */,
+				A7BE2402195A577300D0A97B /* LibPdHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -433,11 +452,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XcodeLibPDTemplate/XcodeLibPDTemplate-Prefix.pch";
 				INFOPLIST_FILE = "XcodeLibPDTemplate/XcodeLibPDTemplate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../pd-for-ios/libpd";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../pd-for-ios/libpd/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -447,11 +467,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XcodeLibPDTemplate/XcodeLibPDTemplate-Prefix.pch";
 				INFOPLIST_FILE = "XcodeLibPDTemplate/XcodeLibPDTemplate-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../pd-for-ios/libpd";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../pd-for-ios/libpd/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

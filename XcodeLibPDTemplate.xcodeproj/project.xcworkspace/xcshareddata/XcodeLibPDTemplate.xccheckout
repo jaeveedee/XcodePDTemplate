@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7CAE668E-EF94-4014-B69A-DA60FC6BDFA1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XcodeLibPDTemplate</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0391B45B-83B3-45E0-B25D-A88D1433637C</key>
+		<string>git://github.com/libpd/libpd.git</string>
+		<key>D1E1B4FF-3CA6-4B31-8872-7E70BB14AFC4</key>
+		<string>https://github.com/jaeveedee/XcodePDTemplate.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XcodeLibPDTemplate.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0391B45B-83B3-45E0-B25D-A88D1433637C</key>
+		<string>../../../pd-for-ios/libpd</string>
+		<key>D1E1B4FF-3CA6-4B31-8872-7E70BB14AFC4</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jaeveedee/XcodePDTemplate.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D1E1B4FF-3CA6-4B31-8872-7E70BB14AFC4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0391B45B-83B3-45E0-B25D-A88D1433637C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libpd</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D1E1B4FF-3CA6-4B31-8872-7E70BB14AFC4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XcodePDTemplate</string>
+		</dict>
+	</array>
+</dict>
+</plist>

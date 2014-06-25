@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LibPdHelper.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <LibPDDelegate>
 
 @end

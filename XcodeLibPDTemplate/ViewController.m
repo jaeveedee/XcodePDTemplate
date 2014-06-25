@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    
+}
+
+@property (strong, nonatomic) LibPdHelper *pdHelper;
 
 @end
 
@@ -18,12 +22,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self initPD];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initPD
+{
+    _pdHelper = [[LibPdHelper alloc] initWithPatch:@"main.pd"];
+    _pdHelper.delegate = self;
 }
 
 @end
