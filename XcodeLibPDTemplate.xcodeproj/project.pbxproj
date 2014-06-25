@@ -25,6 +25,7 @@
 		A70B59CB195A3C2C00A91E7C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59CA195A3C2C00A91E7C /* AudioToolbox.framework */; };
 		A70B59CD195A3C3300A91E7C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70B59CC195A3C3300A91E7C /* AVFoundation.framework */; };
 		A7BE2402195A577300D0A97B /* LibPdHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BE2401195A577300D0A97B /* LibPdHelper.m */; };
+		A7BE240A195B369D00D0A97B /* libpd-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BE23FB195A4E1D00D0A97B /* libpd-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7BE240A195B369D00D0A97B /* libpd-ios.a in Frameworks */,
 				A70B59CD195A3C3300A91E7C /* AVFoundation.framework in Frameworks */,
 				A70B59CB195A3C2C00A91E7C /* AudioToolbox.framework in Frameworks */,
 				A70B598B195A3BB700A91E7C /* CoreGraphics.framework in Frameworks */,
@@ -456,6 +458,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XcodeLibPDTemplate/XcodeLibPDTemplate-Prefix.pch";
 				INFOPLIST_FILE = "XcodeLibPDTemplate/XcodeLibPDTemplate-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../pd-for-ios/libpd/**";
 				WRAPPER_EXTENSION = app;
