@@ -5,7 +5,7 @@
 #X msg -156 109 1 1 \, 0.25 100 50 \, 0 1000 150;
 #X obj -210 170 *~;
 #X obj -156 76 r sentBang;
-#X obj 102 121 s receiveBang;
+#X obj 102 131 s receiveBang;
 #X obj 102 94 metro 500;
 #X obj 102 62 loadbang;
 #X connect 1 0 4 0;
