@@ -4,7 +4,7 @@
 //
 //  Created by Jay Van Dyke on 6/24/14.
 //  Copyright (c) 2014 JVDev. All rights reserved.
-//
+//  www.jayvandyke.com
 
 #import "LibPdHelper.h"
 
@@ -78,8 +78,7 @@
 
 - (void)receiveSymbol:(NSString *)symbol fromSource:(NSString *)source
 {
-    NSString *sy = symbol;
-    NSString *s = source;
+
     [self.delegate symbolReceiver:symbol from:source];
 }
 

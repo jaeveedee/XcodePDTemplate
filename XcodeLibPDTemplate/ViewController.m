@@ -23,6 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self initPD];
+    [self addPdListeners];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,9 +34,15 @@
 
 - (void)initPD
 {
+    //init the pdhelper
     _pdHelper = [[LibPdHelper alloc] initWithPatch:@"main.pd"];
     _pdHelper.delegate = self;
-    [_pdHelper addListener:@"receiveBang"];
+    
+}
+
+- (void)addPdListeners
+{
+    [_pdHelper addListener:@"receiveBang"]; //need more of these for each send in the pd patch
 }
 
 - (IBAction)play:(id)sender {
