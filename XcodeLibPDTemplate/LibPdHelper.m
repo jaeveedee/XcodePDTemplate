@@ -22,7 +22,7 @@
 {
     self = [super init];
     if (self) {
-        NSString *mainPatch = patch;//change pd patch name here
+        NSString *mainPatch = patch;
         
         //open the patch
         p = [PdBase openFile:mainPatch path:[[NSBundle mainBundle]resourcePath]];
