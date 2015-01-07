@@ -7,6 +7,7 @@
 //  www.jayvandyke.com
 
 #import "LibPdHelper.h"
+#import <UIKit/UIKit.h>
 
 @interface LibPdHelper (){
     PdDispatcher *dispatcher;
@@ -27,20 +28,20 @@
         //open the patch
         p = [PdBase openFile:mainPatch path:[[NSBundle mainBundle]resourcePath]];
         if(!p){
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!"
-                                                            message:@"Pd patch not instantiated"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Uh Oh!"
+                                                                           message:@"Something went wrong. Please quit and restart."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {}];
+            
+            [self.superclass presentViewController:alert animated:YES completion:nil];
         }
         
         dispatcher = [[PdDispatcher alloc] init];
         
         [PdBase setDelegate:dispatcher];
         
-        //add listeners here
-        //[dispatcher addListener:self forSource:@"listener"];
         
     }
     return self;
@@ -51,18 +52,13 @@
     [dispatcher addListener:self forSource:listener];
 }
 
-
-
 - (void)receiveBangFromSource:(NSString *)source
 {
-    //receiving bangs
     NSLog(@"bang");
-    [self.delegate bangReceiver:source];
 }
 
 - (void)receiveFloat:(float)received fromSource:(NSString *)source
 {
-    //receiving floats
     [self.delegate floatReceiver:received from:source];
 }
 
@@ -78,7 +74,6 @@
 
 - (void)receiveSymbol:(NSString *)symbol fromSource:(NSString *)source
 {
-
     [self.delegate symbolReceiver:symbol from:source];
 }
 
